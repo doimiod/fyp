@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Random;
 import static java.util.GregorianCalendar.*;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
@@ -13,7 +14,8 @@ import edu.berkeley.cs.jqf.fuzz.*;
 public class StackIntTest {
 
     // private StackInt1 s[];
-    public StackInt1 s = new StackInt1(10);
+    public StackInt1 s1 = new StackInt1(10);
+    public StackInt2 s2 = new StackInt2(10);
 
     // @Fuzz
     // public void testPush(@From(StackIntGenerator.class) int num) {
@@ -45,40 +47,50 @@ public class StackIntTest {
     // }
 
 
-    @Fuzz void testMultiplePushes(@From(StackIntGenerator.class) int[] array) {
-
-        
-
-    }
+    // @Fuzz void testMultiplePushes(@From(StackIntGenerator.class) int[] array) {
+    // }
 
     @Fuzz
     public void testEverything(@From(StackIntGenerator.class) int[] array) {
+        
+        System.out.println(Arrays.toString(array));
 
-        // for (int i = 0; i < array.length; i++) {
-        //     System.out.print(array[i] + " ");
-        // }
-
+        // make a case
         for(int i = 0; i < array.length; i++) {
 
-            int num = array[i];
-            if(num%3 == 0) {
-                s.push(num);
-                assertEquals(num, s.peek());
-                // assertEquals(this.s.length, s.size());
-                // assertEquals(s, s.getStack());
-                // assertArrayEquals(this.s, s.getStack());
-            }
-            else if(num%3 == 1){
+            Random random = new Random();
+            int caseDecider = random.nextInt(3) + 1; //make a case decision.
+                                                        // if it is 1 it pushes, 2 is popping, 3 is showing a peek.
+            
+            System.out.println("case is "+caseDecider); 
 
-                int expected = s.peek();
-                int poppedNum = s.pop();
+            int num = array[i];
+            switch (caseDecider) {
+
+                case 1:
+                s1.push(num);
+                assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
+                                               // Moreover, we also have to charck if it throw an error
+                break;
+                
+                case 2:
+                int expected = s1.peek();
+                int poppedNum = s1.pop();
                 assertEquals(expected, poppedNum);
-                // assertEquals(this.s.length, s.size());
-            } 
-            else {
-                s.peek();
+                break;
+                
+                case 3:
+                System.out.println("peek is " + s1.peek());
+                break;
+
+                default:
+                break;
             }
+           
         }
+            
+
+        
     }
 
 }
@@ -90,3 +102,32 @@ public class StackIntTest {
 // like i have to completely understnand how it works
 // and think about how to check whether the test is working 
 // e.g. how to check whether the pop is working twice in a row
+
+
+
+
+// for (int i = 0; i < array.length; i++) {
+//     System.out.print(array[i] + " ");
+// }
+
+// for(int i = 0; i < array.length; i++) {
+
+//     int num = array[i];
+//     if(num%3 == 0) {
+//         s.push(num);
+//         assertEquals(num, s.peek());
+//         // assertEquals(this.s.length, s.size());
+//         // assertEquals(s, s.getStack());
+//         // assertArrayEquals(this.s, s.getStack());
+//     }
+//     else if(num%3 == 1){
+
+//         int expected = s.peek();
+//         int poppedNum = s.pop();
+//         assertEquals(expected, poppedNum);
+//         // assertEquals(this.s.length, s.size());
+//     } 
+//     else {
+//         s.peek();
+//     }
+// }
