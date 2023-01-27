@@ -7,10 +7,6 @@ public class StackInt2 {
 	private int ptr;
 
     Stack<Integer> stack = new Stack<Integer>();
-
-	public class EmptyStackIntException extends RuntimeException{
-		public EmptyStackIntException() {}
-	}
 	
 	public class OverflowStackIntException extends RuntimeException{
 		public OverflowStackIntException() {}
@@ -21,7 +17,7 @@ public class StackInt2 {
     }
 
 
-    public StackInt2(int num) throws OutOfMemoryError{
+    public StackInt2(int num) throws OutOfMemoryError{ // constractor
         this.maximum = num;
         
         if(num <=0){
@@ -33,10 +29,17 @@ public class StackInt2 {
     }
     
 
-    public void push(int num) {
-
-        this.stack.push(num);
-        System.out.println("pushed " + num);
+    public void push(int num) {    // i have to make an excetion by myself
+        // boolean containSame = stack.contains(num);
+        // if(containSame){
+        //     System.out.println("array alredy contains " + num);
+        // }
+        // else{
+            this.stack.push(num);
+            System.out.println("pushed " + num);
+        // }
+        
+        
     }
 	
     public int pop(){ //An exception is thrown if we call pop() when the stack is empty.

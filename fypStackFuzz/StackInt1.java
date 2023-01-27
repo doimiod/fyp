@@ -53,9 +53,9 @@ public class StackInt1 {
 			this.stack[this.ptr++] = num;
 			System.out.println("pushed " + num);
 		}
-		else System.out.println("array alredy contains " + num + " at element " + containSame);
+		else System.out.println("array alredy contains " + num);
 
-		System.out.println(Arrays.toString(this.stack));
+		// System.out.println(Arrays.toString(this.stack));
 		// System.out.println("temp is "+Arrays.toString(temp));
 		
 		return this.stack;
@@ -87,7 +87,7 @@ public class StackInt1 {
 		}
 
 		result = this.stack[this.ptr-1];
-    	System.out.println("peek is " + result);
+    	// System.out.println("peek is " + result);
 
         return result;
 			

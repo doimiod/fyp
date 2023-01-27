@@ -3,7 +3,7 @@ import java.util.Random;
 import static java.util.GregorianCalendar.*;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
-// import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.runner.RunWith;
 import com.pholser.junit.quickcheck.*;
@@ -14,8 +14,6 @@ import edu.berkeley.cs.jqf.fuzz.*;
 public class StackIntTest {
 
     // private StackInt1 s[];
-    public StackInt1 s1 = new StackInt1(10);
-    public StackInt2 s2 = new StackInt2(10);
 
     // @Fuzz
     // public void testPush(@From(StackIntGenerator.class) int num) {
@@ -50,6 +48,9 @@ public class StackIntTest {
     // @Fuzz void testMultiplePushes(@From(StackIntGenerator.class) int[] array) {
     // }
 
+    public StackInt1 s1 = new StackInt1(10);
+    public StackInt2 s2 = new StackInt2(10);
+
     @Fuzz
     public void testEverything(@From(StackIntGenerator.class) int[] array) {
         
@@ -71,16 +72,24 @@ public class StackIntTest {
                 s1.push(num);
                 assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
                                                // Moreover, we also have to charck if it throw an error
+                s2.push(num);
+                                               
                 break;
                 
                 case 2:
                 int expected = s1.peek();
                 int poppedNum = s1.pop();
-                assertEquals(expected, poppedNum);
+                int pop2 = s2.pop();
+                assertEquals(poppedNum, pop2);
+
+                // assertEquals(expected, poppedNum);
                 break;
                 
                 case 3:
                 System.out.println("peek is " + s1.peek());
+                assertEquals(s1.peek(),  s2.peek());
+                
+               
                 break;
 
                 default:

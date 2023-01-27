@@ -8,10 +8,15 @@ public class StackInt2Main {
 		
 		// s3.push(1);
 		// s3.pop();
+
+        // s1.peek();
 		
 		s1.push(1);
 		s1.push(2);
 		s1.push(3);
+        s1.push(3);
+        s1.push(2);
+        s1.push(1);
 		s1.push(4);
         // System.out.println(s1);
         
@@ -19,7 +24,7 @@ public class StackInt2Main {
 		s1.pop();
 		s1.pop();
 		s1.pop();
-		// s1.pop();
+		s1.pop();
 		// s1.pop();
 		// s1.push(1);
 		// s1.push(2);
