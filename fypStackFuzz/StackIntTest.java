@@ -97,8 +97,17 @@ public class StackIntTest {
             }
            
         }
-            
 
+        // s1.push(1);
+        // s2.push(1);
+        // s1.push(2);
+        // s2.push(1);
+        // int poppedNum = s1.pop();
+        // int pop2 = s2.pop();
+        // assertEquals(poppedNum, pop2);
+        // poppedNum = s1.pop();
+        // pop2 = s2.pop();
+        // assertEquals(poppedNum, pop2);
         
     }
 

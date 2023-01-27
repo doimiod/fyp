@@ -71,7 +71,7 @@ public class StackInt1 {
             // try to throw an exception if outof memory or bounds 
 		}
 		result = this.stack[--this.ptr];
-		System.out.println("popped put " + result);
+		System.out.println("popped out " + result);
 		
 		// return this.stack;
 		return result;
