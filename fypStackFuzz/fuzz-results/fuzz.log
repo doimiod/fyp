@@ -1,34 +1,8 @@
-Found crash: class StackInt1$EmptyStackIntException - 
+Found crash: class StackInt1$EmptyStackException - 
 Saved - fuzz-results/failures/id_000000 random +crash
-Saving new input (at run 5): input #0 of size 20; reason = +count +cov +valid
-Saved - fuzz-results/corpus/id_000000 random +count +cov +valid
-Found crash: class StackInt1$EmptyStackIntException - 
-Saved - fuzz-results/failures/id_000001 src:000000,havoc:3 +crash
-Found crash: class StackInt1$OverflowStackIntException - 
-Saved - fuzz-results/failures/id_000002 src:000000,havoc:7 +crash
-Saving new input (at run 13): input #1 of size 92; reason = +count
-Saved - fuzz-results/corpus/id_000001 src:000000,havoc:1 +count
-Saving new input (at run 16): input #2 of size 20; reason = +count
-Saved - fuzz-results/corpus/id_000002 src:000000,havoc:3 +count
-Found crash: class StackInt1$OverflowStackIntException - 
-Saved - fuzz-results/failures/id_000003 src:000000,havoc:1 +crash
-Saving new input (at run 18): input #3 of size 36; reason = +count
-Saved - fuzz-results/corpus/id_000003 src:000000,havoc:4 +count
-Found crash: class StackInt1$EmptyStackIntException - 
-Saved - fuzz-results/failures/id_000004 src:000000,havoc:18 +crash
-Saving new input (at run 23): input #4 of size 8; reason = +count
-Saved - fuzz-results/corpus/id_000004 src:000000,havoc:11 +count
-Found crash: class StackInt1$EmptyStackIntException - 
-Saved - fuzz-results/failures/id_000005 src:000000,havoc:5 +crash
-Saving new input (at run 51): input #5 of size 160; reason = +count
-Saved - fuzz-results/corpus/id_000005 src:000000,havoc:14 +count
-Saving new input (at run 63): input #6 of size 72; reason = +count
-Saved - fuzz-results/corpus/id_000006 src:000000,havoc:9 +count
-Saving new input (at run 85): input #7 of size 216; reason = +count
-Saved - fuzz-results/corpus/id_000007 src:000000,havoc:13 +count
-Saving new input (at run 108): input #8 of size 72; reason = +count
-Saved - fuzz-results/corpus/id_000008 src:000000,havoc:8 +count
-Saving new input (at run 131): input #9 of size 32; reason = +count
-Saved - fuzz-results/corpus/id_000009 src:000000,havoc:4 +count
-Saving new input (at run 171): input #10 of size 204; reason = +count
-Saved - fuzz-results/corpus/id_000010 src:000000,havoc:1 +count
+Found crash: class StackInt1$EmptyStackException - 
+Saved - fuzz-results/failures/id_000001 random +crash
+Found crash: class StackInt1$EmptyStackException - 
+Saved - fuzz-results/failures/id_000002 random +crash
+Found crash: class StackInt1$EmptyStackException - 
+Saved - fuzz-results/failures/id_000003 random +crash
