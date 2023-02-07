@@ -1,6 +1,8 @@
 27 January 2023
 • deal with exceptions in equivalence -> i have to report the error i think?
 -- make an exception for stackInt2 by myself - done
+-- main thing is to compare two classes. lets find how to compare two arrays for now.
+currently doing convert stack into arrays.
 • restrict the domain of integer values done - done
 • understand how to limit the number of calls to the test function that fuzz testing is doing
 • find a way to stop testing when one difference is found - i think it can be done by the time

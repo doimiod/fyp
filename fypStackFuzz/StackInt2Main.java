@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class StackInt2Main {
 
 	public static void main(String[] args) {
@@ -16,6 +18,9 @@ public class StackInt2Main {
 		s1.push(3);
         s1.push(3);
         s1.push(2);
+
+		// Object[] arr = s1.toArray();
+
         // s1.push(1);
 		// s1.push(4);
         // System.out.println(s1);
