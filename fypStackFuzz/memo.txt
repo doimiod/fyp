@@ -3,7 +3,7 @@
 -- make an exception for stackInt2 by myself - done
 • restrict the domain of integer values done - done
 • understand how to limit the number of calls to the test function that fuzz testing is doing
-• find a way to stop testing when one difference is found - i think it can be done by he time
+• find a way to stop testing when one difference is found - i think it can be done by the time
 • find a way to try catch exception
 
 i found it stopped somehow but i cant limit by my own

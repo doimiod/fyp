@@ -75,20 +75,22 @@ public class StackIntTest {
             switch (array[1][i]) {
 
                 case 1:
-                System.out.println("s1 -------------------- ");
+                System.out.println("case 1 -------------------- ");
+                // System.out.println("s1 -------------------- ");
                 s1.push(num);
                 assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
                                                // Moreover, we also have to charck if it throw an error
-                System.out.println("s2 -------------------- ");
+                // System.out.println("s2 -------------------- ");
                 s2.push(num);
                                                
                 break;
                 
                 case 2:
-                System.out.println("s1 -------------------- ");
+                System.out.println("case 2 -------------------- ");
+                // System.out.println("s1 -------------------- ");
                 int expected = s1.peek();
                 int poppedNum = s1.pop();
-                System.out.println("s2 -------------------- ");
+                // System.out.println("s2 -------------------- ");
                 int pop2 = s2.pop();
                 assertEquals(poppedNum, pop2);
 
@@ -96,6 +98,7 @@ public class StackIntTest {
                 break;
                 
                 case 3:
+                System.out.println("case 3 -------------------- ");
                 System.out.println("peek is " + s1.peek());
                 assertEquals(s1.peek(),  s2.peek());
                 

@@ -51,9 +51,9 @@ public class StackInt1 {
 
 		if(containSame < 0){
 			this.stack[this.ptr++] = num;
-			System.out.println("pushed " + num);
+			System.out.println("s1 pushed " + num);
 		}
-		else System.out.println("array alredy contains " + num);
+		else System.out.println("s1 : array alredy contains " + num);
 
 		// System.out.println(Arrays.toString(this.stack));
 		// System.out.println("temp is "+Arrays.toString(temp));
@@ -71,7 +71,7 @@ public class StackInt1 {
             // try to throw an exception if outof memory or bounds 
 		}
 		result = this.stack[--this.ptr];
-		System.out.println("popped out " + result);
+		System.out.println("s1 popped out " + result);
 		
 		// return this.stack;
 		return result;

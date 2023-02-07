@@ -41,7 +41,7 @@ public class StackInt2 {
             }
 
             this.stack.push(num);
-            System.out.println("pushed " + num);
+            System.out.println("s2 pushed " + num);
             this.ptr++;
         // }
         
@@ -53,7 +53,7 @@ public class StackInt2 {
         
         int result = 0;
         result = this.stack.pop();
-		System.out.println("popped " + result);
+		System.out.println("s2 popped " + result);
         --this.ptr;
 		
 		return result;

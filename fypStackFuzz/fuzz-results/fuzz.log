@@ -8,9 +8,9 @@ Found crash: class StackInt1$EmptyStackException -
 Saved - fuzz-results/failures/id_000003 random +crash
 Found crash: class StackInt1$EmptyStackException - 
 Saved - fuzz-results/failures/id_000004 random +crash
-Found crash: class java.lang.AssertionError - expected:<-1> but was:<1>
-Saved - fuzz-results/failures/id_000005 random +crash
 Found crash: class StackInt1$EmptyStackException - 
+Saved - fuzz-results/failures/id_000005 random +crash
+Found crash: class java.lang.AssertionError - expected:<0> but was:<-1>
 Saved - fuzz-results/failures/id_000006 random +crash
 Found crash: class java.lang.AssertionError - expected:<-1> but was:<1>
 Saved - fuzz-results/failures/id_000007 random +crash
