@@ -29,16 +29,23 @@ public class StackInt2 {
     }
     
 
-    public void push(int num) {    // i have to make an excetion by myself
+    public Stack<Integer> push(int num) throws StackOverflowError{    // i have to make an excetion by myself
         // boolean containSame = stack.contains(num);
         // if(containSame){
         //     System.out.println("array alredy contains " + num);
         // }
         // else{
+            if(this.ptr >= this.maximum){
+                System.out.println("this is full");
+                throw new StackOverflowError();
+            }
+
             this.stack.push(num);
             System.out.println("pushed " + num);
+            this.ptr++;
         // }
         
+        return this.stack;
         
     }
 	
@@ -47,6 +54,7 @@ public class StackInt2 {
         int result = 0;
         result = this.stack.pop();
 		System.out.println("popped " + result);
+        --this.ptr;
 		
 		return result;
 	}
