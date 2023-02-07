@@ -50,13 +50,21 @@ public class StackInt2 {
     }
 	
     public int pop(){ //An exception is thrown if we call pop() when the stack is empty.
+
+        try{
+            int result = 0;
+            result = this.stack.pop();
+            System.out.println("s2 popped " + result);
+            --this.ptr;
+            return result;
+        }
+        catch(EmptyStackException e){
+            System.out.println("this stack is empty");
+        }
+
         
-        int result = 0;
-        result = this.stack.pop();
-		System.out.println("s2 popped " + result);
-        --this.ptr;
+		return 0;
 		
-		return result;
 	}
 
     public int size() {

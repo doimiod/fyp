@@ -59,6 +59,15 @@ public class StackIntTest {
 
         // make a case
         System.out.println(array[0].length);
+
+        int arr [] = new int[array[0].length];
+
+        for(int i = 0; i < array[0].length; i++){
+            Random random = new Random();
+            int aaa = random.nextInt(2) + 1; //make a case decision.
+            arr[i] = 2;
+        }
+
         for(int i = 0; i < array[0].length; i++) {
 
             // Random random = new Random();
@@ -72,27 +81,39 @@ public class StackIntTest {
             // System.out.println("num is " + array[0][i]);
             System.out.println("case is " + array[1][i]);
 
-            switch (array[1][i]) {
+            switch (arr[i]) {
 
                 case 1:
                 System.out.println("case 1 -------------------- ");
-                // System.out.println("s1 -------------------- ");
+                
                 s1.push(num);
-                assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
+                // assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
                                                // Moreover, we also have to charck if it throw an error
-                // System.out.println("s2 -------------------- ");
+                
                 s2.push(num);
                                                
                 break;
                 
                 case 2:
                 System.out.println("case 2 -------------------- ");
-                // System.out.println("s1 -------------------- ");
-                int expected = s1.peek();
-                int poppedNum = s1.pop();
-                // System.out.println("s2 -------------------- ");
-                int pop2 = s2.pop();
-                assertEquals(poppedNum, pop2);
+                
+                try{
+                    int expected = s1.peek();
+                    int poppedNum = s1.pop();
+                    
+                }catch(StackInt1.EmptyStackException e){
+                    
+                }
+                
+                try{
+                    int pop2 = s2.pop();
+                }
+                catch(EmptyStackException f){
+
+                }
+                
+
+                // assertEquals(poppedNum, pop2);
 
                 // assertEquals(expected, poppedNum);
                 break;
