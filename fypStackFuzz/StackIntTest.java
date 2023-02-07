@@ -52,33 +52,43 @@ public class StackIntTest {
     public StackInt2 s2 = new StackInt2(10);
 
     @Fuzz
-    public void testEverything(@From(StackIntGenerator.class) int[] array) {
+    public void testEverything(@From(StackIntGenerator.class) int[][] array) {
         
-        System.out.println(Arrays.toString(array));
+        // System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.deepToString(array));
 
         // make a case
-        for(int i = 0; i < array.length; i++) {
+        System.out.println(array[0].length);
+        for(int i = 0; i < array[0].length; i++) {
 
-            Random random = new Random();
-            int caseDecider = random.nextInt(3) + 1; //make a case decision.
+            // Random random = new Random();
+            // int caseDecider = random.nextInt(3) + 1; //make a case decision.
                                                         // if it is 1 it pushes, 2 is popping, 3 is showing a peek.
             
-            System.out.println("case is "+caseDecider); 
+            // System.out.println("case is "+caseDecider); 
 
-            int num = array[i];
-            switch (caseDecider) {
+            int num = array[0][i];
+
+            // System.out.println("num is " + array[0][i]);
+            System.out.println("case is " + array[1][i]);
+
+            switch (array[1][i]) {
 
                 case 1:
+                System.out.println("s1 -------------------- ");
                 s1.push(num);
                 assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
                                                // Moreover, we also have to charck if it throw an error
+                System.out.println("s2 -------------------- ");
                 s2.push(num);
                                                
                 break;
                 
                 case 2:
+                System.out.println("s1 -------------------- ");
                 int expected = s1.peek();
                 int poppedNum = s1.pop();
+                System.out.println("s2 -------------------- ");
                 int pop2 = s2.pop();
                 assertEquals(poppedNum, pop2);
 

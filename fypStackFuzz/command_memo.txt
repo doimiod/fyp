@@ -9,3 +9,6 @@ javac -cp .:$(jqf/scripts/classpath.sh) StackInt1.java StackInt2.java StackInt1M
 
 # to see a failure report
 jqf/bin/jqf-repro -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything  fuzz-results/failures/id_000000
+
+
+mvn jqf:fuzz -Dclass=StackIntTest -Dmethod=testEverything -Dtime=1m
