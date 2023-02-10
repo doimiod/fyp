@@ -1,0 +1,11 @@
+practice/StackInt2.class
+practice/StackIntTest.class
+practice/StackInt1Main.class
+practice/StackInt2$OverflowStackIntException.class
+practice/StackInt1$EmptyStackException.class
+practice/StackInt2$OutOfMemoryError.class
+practice/StackInt2Main.class
+practice/StackIntGenerator.class
+practice/StackInt1$StackOverflowError.class
+practice/StackInt1$OverflowStackIntException.class
+practice/StackInt1.class
