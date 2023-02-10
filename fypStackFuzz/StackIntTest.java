@@ -10,10 +10,7 @@ import com.pholser.junit.quickcheck.*;
 import com.pholser.junit.quickcheck.generator.*;
 import edu.berkeley.cs.jqf.fuzz.*;
 
-@RunWith(JQF.class)
-public class StackIntTest {
-
-    // private StackInt1 s[];
+// private StackInt1 s[];
 
     // @Fuzz
     // public void testPush(@From(StackIntGenerator.class) int num) {
@@ -48,8 +45,17 @@ public class StackIntTest {
     // @Fuzz void testMultiplePushes(@From(StackIntGenerator.class) int[] array) {
     // }
 
+
+
+@RunWith(JQF.class)
+public class StackIntTest {
+
+    
     public StackInt1 s1 = new StackInt1(10);
     public StackInt2 s2 = new StackInt2(10);
+
+    boolean s1Exception = false;
+    boolean s2Exception = false;
 
     @Fuzz
     public void testEverything(@From(StackIntGenerator.class) int[][] array) {
@@ -96,25 +102,41 @@ public class StackIntTest {
                 // Object[] arr = this.s2.toArray();
                 // assertEquals(true, Arrays.equals(this.s1, arr));
 
+                System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
+                System.out.println("s2 currenty has " +s2.stackString());
 
-                                               
                 break;
                 
                 case 2:
                 System.out.println("case 2 -------------------- ");
                 
                 try{
-                    int expected = s1.peek();
-                    int poppedNum = s1.pop();
+                    // int expected = s1.peek();
+                    // int poppedNum = s1.pop();
+                    s1.pop();
                     
                 }catch(StackInt1.EmptyStackException e){
+                    s1Exception = true;
                 }
 
                 try{
                     int pop2 = s2.pop();
                 }
-                catch(EmptyStackException f){
+                catch(EmptyStackException e){
+                    s2Exception = true;
                 }
+
+                if(s1Exception == true || s2Exception == true){
+                    assertTrue(s1Exception == s2Exception);
+                    System.out.println("both of them throw the same exception");
+                }
+                
+                s1Exception = false;
+                s2Exception = false;
+
+                System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
+                System.out.println("s2 currenty has " +s2.stackString());
+
 
                 // Assert.assertArrayEquals(this.s1, this.s2);
                 // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();
@@ -122,14 +144,37 @@ public class StackIntTest {
                 // assertEquals(poppedNum, pop2);
 
                 // assertEquals(expected, poppedNum);
+
+
                 break;
                 
                 case 3:
                 System.out.println("case 3 -------------------- ");
-                System.out.println("peek is " + s1.peek());
-                // assertEquals(s1.peek(),  s2.peek());
-                
-               
+
+                try{
+                    System.out.println("s1 peek is " + s1.peek());
+                }catch(StackInt1.EmptyStackException e){
+                    s1Exception = true;
+                }
+
+                try{
+                    System.out.println("s2 peek is " + s2.peek());
+                }
+                catch(EmptyStackException e){
+                    s2Exception = true;
+                }
+
+                if(s1Exception == true || s2Exception == true){
+                    assertTrue(s1Exception == s2Exception);
+                    System.out.println("both of them throw the same exception");
+                }
+
+                if(s1Exception == false && s2Exception == false)
+                assertEquals(s1.peek(),  s2.peek());
+
+                s1Exception = false;
+                s2Exception = false;
+
                 break;
 
                 default:

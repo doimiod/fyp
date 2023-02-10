@@ -1,5 +1,6 @@
 import java.lang.*;
 import java.util.*;
+import edu.berkeley.cs.jqf.fuzz.*;
 
 public class StackInt2 {
     
@@ -60,12 +61,14 @@ public class StackInt2 {
         }
         catch(EmptyStackException e){
             System.out.println("this stack is empty");
+            throw new EmptyStackException();
         }
 
-        
-		return 0;
-		
 	}
+
+    public String stackString(){
+        return this.stack.toString();
+    }
 
     public int size() {
         return stack.size(); 

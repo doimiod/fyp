@@ -1,3 +1,4 @@
+import java.util.*;
 public class StackInt1Main {
 
 	public static void main(String[] args) {
@@ -27,12 +28,19 @@ public class StackInt1Main {
 		// s1.push(5);
 		// s1.push(4);
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		s1.pop();
+		System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
 		// s1.push(1);
 		// s1.push(2);
 		

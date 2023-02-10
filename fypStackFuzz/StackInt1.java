@@ -1,5 +1,8 @@
 import java.lang.*;
 import java.util.Arrays;
+import java.util.ArrayList;
+import edu.berkeley.cs.jqf.fuzz.*;
+import java.util.stream.*;
 
 public class StackInt1 {
 	
@@ -61,7 +64,7 @@ public class StackInt1 {
 		return this.stack;
     }
 	
-	public int pop() throws EmptyStackException{
+	public void pop() throws EmptyStackException{
 
         int result = 0;
 
@@ -70,12 +73,40 @@ public class StackInt1 {
 			throw new EmptyStackException();
             // try to throw an exception if outof memory or bounds 
 		}
+
 		result = this.stack[--this.ptr];
 		System.out.println("s1 popped out " + result);
+
+		this.ptr++;
 		
-		// return this.stack;
-		return result;
+		int[] newArray = new int[this.maximum];
+		for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
+			if (i == this.ptr) {
+				continue;
+			}
+			newArray[j++] = this.stack[i];
+		}
+
+		this.stack = newArray;
+
+		--this.ptr;
 	}
+
+		// return result;
+		
+		// return this.stack[--this.ptr];
+// //array to arrayList
+		// ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(this.stack)); 
+		// // Remove the specified element 
+		// arrayList.remove(this.ptr); 
+	 
+		// // return the resultant array 
+		// arrayList.stream().mapToInt(Integer::intValue).toArray(); 
+
+// 		System.arraycopy(originalArray, indexToRemove + 1, originalArray, indexToRemove, originalArray.length - indexToRemove - 1);
+// originalArray = Arrays.copyOf(originalArray, originalArray.length - 1);
+
+	
 	
 	public int peek() throws EmptyStackException{
 

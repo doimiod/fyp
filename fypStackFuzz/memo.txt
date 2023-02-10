@@ -2,11 +2,12 @@
 • deal with exceptions in equivalence -> i have to report the error i think?
 -- make an exception for stackInt2 by myself - done
 -- main thing is to compare two classes. lets find how to compare two arrays for now.
-currently doing convert stack into arrays.
+currently doing convert stack into arrays. abd have to find a way to try catch exception
 • restrict the domain of integer values done - done
 • understand how to limit the number of calls to the test function that fuzz testing is doing
+---- by maven
 • find a way to stop testing when one difference is found - i think it can be done by the time
-• find a way to try catch exception
+
 
 i found it stopped somehow but i cant limit by my own
 it says 
