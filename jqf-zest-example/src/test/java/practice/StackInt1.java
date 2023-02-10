@@ -43,16 +43,19 @@ public class StackInt1 {
 		this.ptr = 0;
 	}
 	
-	public int[] push(int num) throws StackOverflowError{
+	public void push(int num) throws StackOverflowError{
 		
 		if(this.ptr >= this.maximum){
 			System.out.println("this is full");
 			throw new StackOverflowError();
 		}
 
-		int[] temp = Arrays.copyOf(this.stack, this.maximum); //make a copy of the stack
+		int[] temp = Arrays.copyOf(this.stack, this.ptr); //make a copy of the stack
+		System.out.println("temp1 is "+Arrays.toString(temp));
 		Arrays.sort(temp);                                  // sort the array for binary search
 		int containSame = Arrays.binarySearch(temp, num); // O(logn) search for the same number of elements.
+
+		System.out.println("temp is "+Arrays.toString(temp));
 
 		if(containSame < 0){
 			this.stack[this.ptr++] = num;
@@ -63,10 +66,11 @@ public class StackInt1 {
 		// System.out.println(Arrays.toString(this.stack));
 		// System.out.println("temp is "+Arrays.toString(temp));
 		
-		return this.stack;
+		// return this.stack;
+		
     }
 	
-	public void pop() throws EmptyStackException{
+	public int pop() throws EmptyStackException{
 
         int result = 0;
 
@@ -78,23 +82,25 @@ public class StackInt1 {
 
 		result = this.stack[--this.ptr];
 		System.out.println("s1 popped out " + result);
-
-		this.ptr++;
+		return result;
+		// this.ptr++;
 		
-		int[] newArray = new int[this.maximum];
-		for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
-			if (i == this.ptr) {
-				continue;
-			}
-			newArray[j++] = this.stack[i];
-		}
+		// int[] newArray = new int[this.maximum];
+		// for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
+		// 	if (i == this.ptr) {
+		// 		continue;
+		// 	}
+		// 	newArray[j++] = this.stack[i];
+		// }
 
-		this.stack = newArray;
+		// this.stack = newArray;
 
-		--this.ptr;
+		// --this.ptr;
+
+		
 	}
 
-		// return result;
+		
 		
 		// return this.stack[--this.ptr];
 // //array to arrayList

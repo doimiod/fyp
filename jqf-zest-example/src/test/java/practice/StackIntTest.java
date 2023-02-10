@@ -12,7 +12,7 @@ import com.pholser.junit.quickcheck.*;
 import com.pholser.junit.quickcheck.generator.*;
 import edu.berkeley.cs.jqf.fuzz.*;
 
-// private StackInt1 s[];
+/*  private StackInt1 s[];
 
     // @Fuzz
     // public void testPush(@From(StackIntGenerator.class) int num) {
@@ -47,7 +47,7 @@ import edu.berkeley.cs.jqf.fuzz.*;
     // @Fuzz void testMultiplePushes(@From(StackIntGenerator.class) int[] array) {
     // }
 
-
+    */
 
 @RunWith(JQF.class)
 public class StackIntTest {
@@ -68,20 +68,24 @@ public class StackIntTest {
         // make a case
         System.out.println(array[0].length);
 
+/*
         // int arr [] = new int[array[0].length];
         // for(int i = 0; i < array[0].length; i++){
         //     Random random = new Random();
         //     int aaa = random.nextInt(2) + 1; //make a case decision.
         //     arr[i] = 2;
         // }
+*/
 
         for(int i = 0; i < array[0].length; i++) {
 
-            // Random random = new Random();
+/*           // Random random = new Random();
             // int caseDecider = random.nextInt(3) + 1; //make a case decision.
                                                         // if it is 1 it pushes, 2 is popping, 3 is showing a peek.
             
             // System.out.println("case is "+caseDecider); 
+
+*/              
 
             int num = array[0][i];
 
@@ -99,11 +103,21 @@ public class StackIntTest {
                 
                 s2.push(num);
 
-                // Assert.assertArrayEquals(this.s1, this.s2);
+ /*               // Assert.assertArrayEquals(this.s1, this.s2);
                 // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();
                 // Object[] arr = this.s2.toArray();
-                // assertEquals(true, Arrays.equals(this.s1, arr));
+                 */
 
+   /*              // assertEquals(true, Arrays.equals(s1, s2.getToArray()));
+
+                // int [] s1Arr = s1.getStack();
+                // int [] s2Arr = s2.getToArray();
+
+                // for (int j = 0; j < s1Arr.length; i++) {
+                //     assertEquals(s1Arr[j], s2Arr[j]);
+                // }
+                */
+               
                 System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
                 System.out.println("s2 currenty has " +s2.stackString());
 
@@ -113,9 +127,7 @@ public class StackIntTest {
                 System.out.println("case 2 -------------------- ");
                 
                 try{
-                    // int expected = s1.peek();
-                    // int poppedNum = s1.pop();
-                    s1.pop();
+                    int pop1 = s1.pop();
                     
                 }catch(StackInt1.EmptyStackException e){
                     s1Exception = true;
@@ -138,7 +150,6 @@ public class StackIntTest {
 
                 System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
                 System.out.println("s2 currenty has " +s2.stackString());
-
 
                 // Assert.assertArrayEquals(this.s1, this.s2);
                 // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();

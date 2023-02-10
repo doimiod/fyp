@@ -32,7 +32,7 @@ public class StackInt2 {
     }
     
 
-    public Stack<Integer> push(int num) throws StackOverflowError{    // i have to make an excetion by myself
+    public void push(int num) throws StackOverflowError{    // i have to make an excetion by myself
         // boolean containSame = stack.contains(num);
         // if(containSame){
         //     System.out.println("array alredy contains " + num);
@@ -48,7 +48,7 @@ public class StackInt2 {
             this.ptr++;
         // }
         
-        return this.stack;
+        // return this.stack;
         
     }
 	
@@ -79,5 +79,19 @@ public class StackInt2 {
     public int peek(){
         return stack.peek();
     }
+
+    // public int [] getToArray() {
+
+    //     Stack<Integer> copy = (Stack<Integer>) this.stack.clone();
+
+    //     int[] arr  = new int [this.maximum];
+
+    //     for (int i = stack.size() - 1; i >= 0; i--) {
+    //         arr[i] = copy.pop();
+    //     }
+
+    //     return arr;
+
+    // }
 
 }
