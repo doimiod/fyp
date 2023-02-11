@@ -42,6 +42,16 @@ public class StackInt1 {
 		}
 		this.ptr = 0;
 	}
+
+	public int linearSearch(int [] arr, int num){
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == num) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	
 	public void push(int num) throws StackOverflowError{
 		
@@ -50,13 +60,17 @@ public class StackInt1 {
 			throw new StackOverflowError();
 		}
 
-		int[] temp = Arrays.copyOf(this.stack, this.ptr); //make a copy of the stack
-		System.out.println("temp1 is "+Arrays.toString(temp));
-		Arrays.sort(temp);                                  // sort the array for binary search
-		int containSame = Arrays.binarySearch(temp, num); // O(logn) search for the same number of elements.
+		// int[] temp = Arrays.copyOf(this.stack, this.ptr); //make a copy of the stack
+		// System.out.println("temp1 is "+Arrays.toString(temp));
+		// Arrays.sort(temp);                                  // sort the array for binary search
+		// int containSame = Arrays.binarySearch(temp, num); // O(logn) search for the same number of elements.
+		// System.out.println("temp is "+Arrays.toString(temp));
 
-		System.out.println("temp is "+Arrays.toString(temp));
+		// change it to linear sort
 
+		int containSame = linearSearch(this.stack, num);
+		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		
 		if(containSame < 0){
 			this.stack[this.ptr++] = num;
 			System.out.println("s1 pushed " + num);
@@ -79,24 +93,25 @@ public class StackInt1 {
 			throw new EmptyStackException();
             // try to throw an exception if outof memory or bounds 
 		}
-
+		
 		result = this.stack[--this.ptr];
 		System.out.println("s1 popped out " + result);
-		return result;
-		// this.ptr++;
 		
-		// int[] newArray = new int[this.maximum];
-		// for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
-		// 	if (i == this.ptr) {
-		// 		continue;
-		// 	}
-		// 	newArray[j++] = this.stack[i];
-		// }
+		this.ptr++;
+		
+		int[] newArray = new int[this.maximum];
+		for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
+			if (i == this.ptr) {
+				continue;
+			}
+			newArray[j++] = this.stack[i];
+		}
 
-		// this.stack = newArray;
+		this.stack = newArray;
 
-		// --this.ptr;
-
+		--this.ptr;
+		
+		return result;
 		
 	}
 
