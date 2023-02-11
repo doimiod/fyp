@@ -97,19 +97,15 @@ public class StackInt1 {
 		result = this.stack[--this.ptr];
 		System.out.println("s1 popped out " + result);
 		
-		this.ptr++;
-		
 		int[] newArray = new int[this.maximum];
 		for (int i = 0, j = 0; i < this.stack.length; i++) { //o(n)
-			if (i == this.ptr) {
-				continue;
-			}
+			if (i != this.ptr) 
 			newArray[j++] = this.stack[i];
 		}
 
-		this.stack = newArray;
+		System.out.println("new Array is " + Arrays.toString(newArray));
 
-		--this.ptr;
+		this.stack = newArray;
 		
 		return result;
 		

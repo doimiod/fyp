@@ -10,8 +10,14 @@ javac -cp .:$(jqf/scripts/classpath.sh) StackInt1.java StackInt2.java StackInt1M
 # to see a failure report
 jqf/bin/jqf-repro -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything  fuzz-results/failures/id_000000
 
+# to compile
+
+# to run jqf
 cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example
 mvn jqf:fuzz -Dclass=practice.StackIntTest -Dmethod=testEverything -Dtime=1m
 
 cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example
 mvn jqf:repro -Dclass=practice.StackIntTest -Dmethod=testEverything -Dinput=target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000000 -DprintArgs
+
+cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example
+mvn test-compile
