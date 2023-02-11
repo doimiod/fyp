@@ -14,3 +14,38 @@ it says
 Fuzzing stopped due to guidance exception: Too many trials without coverage; likely all assumption violations
 
 i have to make another array to diceide cases - done
+
+
+the reason why i made this 
+int[] newArray = {};
+for (int i = 0; i < this.stack.length; i++) { //o(n)
+    if (i != this.ptr)
+    newArray =  addNum(newArray, this.stack[i]);
+}
+
+because if i just decremante the stack, it just changed the posistion of the pointer,
+then when it checks whether the stack contains the same number, since only the position of the pointer was changed,
+the popped number remain in the stack. 
+Therefore, i make a new array which does not contain the same number.
+
+
+the reason why i made this when popping.
+
+public int[] addNum(int[] arr, int num){
+
+    int[] newNumber = new int[(arr==null)?1:arr.length+1];
+    if (arr!= null)
+    System.arraycopy( arr, 0, newNumber, 0, arr.length );
+    newNumber[newNumber.length-1] = num;
+    arr = newNumber;
+
+    return arr;
+}
+
+because when i initialise the stack like this, 
+stack = new int[10];
+this stack is filled with 0 like below.
+[0,0,0,0,0,0,0,0,0,0]
+Hence, when popping 0 as a new number, the linear search detects 0 in the stack so that new 0 is not popped.
+In order to avoid that, i made above function.
+

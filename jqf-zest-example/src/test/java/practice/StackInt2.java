@@ -33,16 +33,18 @@ public class StackInt2 {
     
 
     public void push(int num) throws StackOverflowError{    // i have to make an excetion by myself
+
+        
+        if(this.ptr >= this.maximum){
+            System.out.println("this is full");
+            throw new StackOverflowError();
+        }
+
         boolean containSame = stack.contains(num);
         if(containSame){
             System.out.println("array alredy contains " + num);
         }
         else{
-            if(this.ptr >= this.maximum){
-                System.out.println("this is full");
-                throw new StackOverflowError();
-            }
-
             this.stack.push(num);
             System.out.println("s2 pushed " + num);
             this.ptr++;

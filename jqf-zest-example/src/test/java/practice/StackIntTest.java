@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import com.pholser.junit.quickcheck.*;
 import com.pholser.junit.quickcheck.generator.*;
 import edu.berkeley.cs.jqf.fuzz.*;
+import janala.logger.inst.POP2;
 
 /*  private StackInt1 s[];
 
@@ -90,18 +91,40 @@ public class StackIntTest {
             int num = array[0][i];
 
             // System.out.println("num is " + array[0][i]);
-            System.out.println("case is " + array[1][i]);
+            // System.out.println("case is " + array[1][i]);
 
             switch (array[1][i]) {
 
                 case 1:
                 System.out.println("case 1 -------------------- ");
                 
-                s1.push(num);
+                // s1.push(num);
                 // assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
                                                // Moreover, we also have to charck if it throw an error
                 
-                s2.push(num);
+                // s2.push(num);
+
+
+                try{
+                    s1.push(num);
+                }catch(StackInt1.StackOverflowError e){
+                    s1Exception = true;
+                }
+
+                try{
+                    s2.push(num);
+                }
+                catch(StackOverflowError e){
+                    s2Exception = true;
+                }
+
+                if(s1Exception == true || s2Exception == true){
+                    assertTrue(s1Exception == s2Exception);
+                    System.out.println("both of them throw the same exception");
+                }
+
+                s1Exception = false;
+                s2Exception = false;
 
  /*               // Assert.assertArrayEquals(this.s1, this.s2);
                 // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();
@@ -126,15 +149,17 @@ public class StackIntTest {
                 case 2:
                 System.out.println("case 2 -------------------- ");
                 
+                int pop1 = 0;
+                int pop2 = 0;
+
                 try{
-                    int pop1 = s1.pop();
-                    
+                    pop1 = s1.pop();
                 }catch(StackInt1.EmptyStackException e){
                     s1Exception = true;
                 }
 
                 try{
-                    int pop2 = s2.pop();
+                    pop2 = s2.pop();
                 }
                 catch(EmptyStackException e){
                     s2Exception = true;
@@ -144,12 +169,16 @@ public class StackIntTest {
                     assertTrue(s1Exception == s2Exception);
                     System.out.println("both of them throw the same exception");
                 }
+
+                if(s1Exception == false && s2Exception == false)
+                assertEquals(pop1, pop2);
                 
                 s1Exception = false;
                 s2Exception = false;
 
                 System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
                 System.out.println("s2 currenty has " +s2.stackString());
+
 
                 // Assert.assertArrayEquals(this.s1, this.s2);
                 // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();
