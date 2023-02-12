@@ -11,7 +11,6 @@ public class StackInt1 {
 	private int [] stack = {};
 	private int maximum ;
 	private int ptr;
-	private int total;
 	
 	// public class EmptyStackIntException extends RuntimeException{
 	// 	public EmptyStackIntException() {}
@@ -45,7 +44,6 @@ public class StackInt1 {
 		*/
 
 		this.maximum = num;
-		this.total = 0;
 		
 		if(num <=0){
 			System.out.println("plese put an appropriate size");
@@ -65,10 +63,10 @@ public class StackInt1 {
 		return -1;
 	}
 
-
+    // this method can add number into array
 	public int[] addNum(int[] arr, int num){
 
-		int[] newNumber = new int[(arr==null)?1:arr.length+1];
+		int[] newNumber = new int[(arr==null)?1:arr.length+1]; //if array is null put 1, otherwise size + 1
 		if (arr!= null)
 		System.arraycopy( arr, 0, newNumber, 0, arr.length );
 		newNumber[newNumber.length-1] = num;
@@ -88,7 +86,6 @@ public class StackInt1 {
 		
 		if(containSame < 0){
 			this.stack = addNum(this.stack, num);
-			this.total += this.stack[this.stack.length-1];
 			// this.stack[this.ptr++] = num;
 			System.out.println("s1 pushed " + num);
 			this.ptr++;
