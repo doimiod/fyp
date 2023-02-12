@@ -82,6 +82,26 @@ public class StackInt2 {
         return stack.peek();
     }
 
+    public Object[] gObjects(){
+		return this.stack.toArray();
+	}
+
+    public int[] gArr(){
+        Object[] obArr = gObjects();
+        int[] arr = {};
+
+        for(int i = 0; i < obArr.length; i++){
+            int[] newNumber = new int[(arr==null)?1:arr.length+1]; //if array is null put 1, otherwise size + 1
+            if (arr!= null)
+            System.arraycopy( arr, 0, newNumber, 0, arr.length );
+            newNumber[newNumber.length-1] = (Integer)obArr[i];
+            arr = newNumber;
+        }
+        
+
+        return arr;
+    }
+
     // public int [] getToArray() {
 
     //     Stack<Integer> copy = (Stack<Integer>) this.stack.clone();

@@ -89,6 +89,7 @@ public class StackIntTest {
 */              
 
             int num = array[0][i];
+            int[] s2arr = {};
 
             // System.out.println("num is " + array[0][i]);
             // System.out.println("case is " + array[1][i]);
@@ -97,13 +98,6 @@ public class StackIntTest {
 
                 case 1:
                 System.out.println("case 1 -------------------- ");
-                
-                // s1.push(num);
-                // assertEquals(num, s1.peek());  // i want to compare two arrays s1 and s2　here . 
-                                               // Moreover, we also have to charck if it throw an error
-                
-                // s2.push(num);
-
 
                 try{
                     s1.push(num);
@@ -144,6 +138,12 @@ public class StackIntTest {
                 System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
                 System.out.println("s2 currenty has " +s2.stackString());
 
+                s2arr = s2.gArr();
+                System.out.println("s2 copiiiiiiiiiiii array is " +Arrays.toString(s2arr));
+
+                assertArrayEquals(s1.getStack(), s2arr);
+
+
                 break;
                 
                 case 2:
@@ -179,9 +179,12 @@ public class StackIntTest {
                 System.out.println("s1 currenty has " +Arrays.toString(s1.getStack()));
                 System.out.println("s2 currenty has " +s2.stackString());
 
+                s2arr = s2.gArr();
+                System.out.println("s2 copiiiiiiiiiiii array is " +Arrays.toString(s2arr));
 
-                // Assert.assertArrayEquals(this.s1, this.s2);
-                // assertThat(Arrays.equals(this.s1, this.s2)).isTrue();
+
+                assertArrayEquals(s1.getStack(), s2arr);
+                // assertThat(Arrays.equals(s1.getStack(), s2arr)).isTrue();
                 // assertEquals(true, Arrays.equals(this.s1, this.s2));
                 // assertEquals(poppedNum, pop2);
 
