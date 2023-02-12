@@ -118,12 +118,14 @@ public class StackInt1 {
 		result = this.stack[--this.ptr];
 		System.out.println("s1 popped out " + result);
 		
-		int[] newArray = {};
-		for (int i = 0; i < this.stack.length; i++) { //o(n)
-			if (i != this.ptr)
-			newArray =  addNum(newArray, this.stack[i]);
-		}
+		int[] newArray = new int[this.stack.length-1];
 
+		// for (int i = 0; i < this.stack.length; i++) { //o(n) <- bad algorithm
+		// 	if (i != this.ptr)
+		// 	newArray =  addNum(newArray, this.stack[i]);
+		// }
+
+		System.arraycopy( this.stack, 0, newArray, 0, this.stack.length-1 );
 		System.out.println("new Array is " + Arrays.toString(newArray));
 
 		this.stack = newArray;

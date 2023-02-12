@@ -97,6 +97,14 @@ public class StackInt2 {
             newNumber[newNumber.length-1] = (Integer)obArr[i];
             arr = newNumber;
         }
+
+        // if(obArr.length == 0)   <--- impossible because its object
+        // return arr;
+        // else{
+        //     arr = new int[obArr.length];
+        //     if (arr!= null)
+        //     System.arraycopy( obArr, 0, arr, 0, obArr.length );
+        // }
         
 
         return arr;

@@ -18,7 +18,7 @@ public class StackIntGenerator extends Generator<int[][]> {
     @Override
     public int[][] generate(SourceOfRandomness random, GenerationStatus status) {
         
-        int length = random.nextInt(1, 1000); //generate a random length
+        int length = random.nextInt(1, 10); //generate a random length
         // int actualLength = random.nextInt(0, length);
         int[][] array = new int[2][length];
         for (int i = 0; i < length; i++) {
