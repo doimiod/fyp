@@ -40,15 +40,15 @@ public class StackInt2 {
             throw new StackOverflowError();
         }
 
-        boolean containSame = stack.contains(num);
-        if(containSame){
-            System.out.println("array alredy contains " + num);
-        }
-        else{
+        // boolean containSame = stack.contains(num);
+        // if(containSame){
+        //     System.out.println("array alredy contains " + num);
+        // }
+        // else{
             this.stack.push(num);
             System.out.println("s2 pushed " + num);
             this.ptr++;
-        }
+        // }
         
         // return this.stack;
         
@@ -98,13 +98,13 @@ public class StackInt2 {
             arr = newNumber;
         }
 
-        // if(obArr.length == 0)   <--- impossible because its object
-        // return arr;
-        // else{
-        //     arr = new int[obArr.length];
-        //     if (arr!= null)
-        //     System.arraycopy( obArr, 0, arr, 0, obArr.length );
-        // }
+        /*if(obArr.length == 0)   <--- impossible because its object
+        return arr;
+        else{
+            arr = new int[obArr.length];
+            if (arr!= null)
+            System.arraycopy( obArr, 0, arr, 0, obArr.length );
+        }*/
         
 
         return arr;

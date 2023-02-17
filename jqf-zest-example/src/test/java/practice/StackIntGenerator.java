@@ -22,7 +22,7 @@ public class StackIntGenerator extends Generator<int[][]> {
         // int actualLength = random.nextInt(0, length);
         int[][] array = new int[2][length];
         for (int i = 0; i < length; i++) {
-            array[0][i] = random.nextInt(1, 3); //generate a random integer and put it in the array
+            array[0][i] = random.nextInt(-1,100); //generate a random integer and put it in the array
             array[1][i] = random.nextInt(1,4); //generate a random integer having 1,2,3
         }
 

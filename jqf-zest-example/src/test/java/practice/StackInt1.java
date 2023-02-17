@@ -50,7 +50,6 @@ public class StackInt1 {
 			this.ptr = 0;
 		}
 
-		
 	}
 
 	public int linearSearch(int [] arr, int num){ //linear search
@@ -84,7 +83,7 @@ public class StackInt1 {
 
 		int containSame = linearSearch(this.stack, num);
 		
-		if(containSame < 0){
+		if(containSame < 0 || this.ptr != 5){
 			this.stack = addNum(this.stack, num);
 			// this.stack[this.ptr++] = num;
 			System.out.println("s1 pushed " + num);
