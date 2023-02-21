@@ -20,3 +20,6 @@ mvn jqf:fuzz -Dclass=practice.StackIntTest -Dmethod=testEverything -Dtime=1m
 
 cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example
 mvn test-compile
+
+
+jqf/bin/jqf-zest -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything

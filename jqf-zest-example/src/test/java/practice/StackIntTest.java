@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import com.pholser.junit.quickcheck.*;
 import com.pholser.junit.quickcheck.generator.*;
 import edu.berkeley.cs.jqf.fuzz.*;
-import janala.logger.inst.POP2;
+// import janala.logger.inst.POP2;
 
 /*  private StackInt1 s[];
 
@@ -97,23 +97,26 @@ public class StackIntTest {
             switch (array[1][i]) {
 
                 case 1:
-                System.out.println("case 1 -------------------- ");
+                System.out.println("case 1 -------------------- "+ i);
 
                 try{
                     s1.push(num);
-                }catch(StackInt1.StackOverflowError e){
+                }catch(Exception e){
                     s1Exception = true;
                 }
 
                 try{
                     s2.push(num);
                 }
-                catch(StackOverflowError e){
+                catch(Exception e){
                     s2Exception = true;
                 }
 
                 if(s1Exception == true || s2Exception == true){
-                    assertTrue(s1Exception == s2Exception);
+                    assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
+                    Exception exception1 = assertThrows(Exception.class, () -> s1.push(num));
+                    Exception exception2 = assertThrows(Exception.class, () -> s2.push(num));
+                    assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 
@@ -147,26 +150,29 @@ public class StackIntTest {
                 break;
                 
                 case 2:
-                System.out.println("case 2 -------------------- ");
+                System.out.println("case 2 -------------------- "+ i);
                 
                 int pop1 = 0;
                 int pop2 = 0;
 
                 try{
                     pop1 = s1.pop();
-                }catch(StackInt1.EmptyStackException e){
+                }catch(Exception e){
                     s1Exception = true;
                 }
 
                 try{
                     pop2 = s2.pop();
                 }
-                catch(EmptyStackException e){
+                catch(Exception e){
                     s2Exception = true;
                 }
 
                 if(s1Exception == true || s2Exception == true){
-                    assertTrue(s1Exception == s2Exception);
+                    assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
+                    Exception exception1 = assertThrows(Exception.class, () -> s1.pop());
+                    Exception exception2 = assertThrows(Exception.class, () -> s2.pop());
+                    assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 
@@ -194,23 +200,26 @@ public class StackIntTest {
                 break;
                 
                 case 3:
-                System.out.println("case 3 -------------------- ");
+                System.out.println("case 3 -------------------- "+ i);
 
                 try{
                     System.out.println("s1 peek is " + s1.peek());
-                }catch(StackInt1.EmptyStackException e){
+                }catch(Exception e){
                     s1Exception = true;
                 }
 
                 try{
                     System.out.println("s2 peek is " + s2.peek());
                 }
-                catch(EmptyStackException e){
+                catch(Exception e){
                     s2Exception = true;
                 }
 
                 if(s1Exception == true || s2Exception == true){
-                    assertTrue(s1Exception == s2Exception);
+                    assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
+                    Exception exception1 = assertThrows(Exception.class, () -> s1.peek());
+                    Exception exception2 = assertThrows(Exception.class, () -> s2.peek());
+                    assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 

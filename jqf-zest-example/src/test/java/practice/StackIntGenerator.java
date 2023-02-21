@@ -18,13 +18,27 @@ public class StackIntGenerator extends Generator<int[][]> {
     @Override
     public int[][] generate(SourceOfRandomness random, GenerationStatus status) {
         
-        int length = random.nextInt(1, 10); //generate a random length
+        int length = random.nextInt(1, 30); //generate a random length
         // int actualLength = random.nextInt(0, length);
         int[][] array = new int[2][length];
         for (int i = 0; i < length; i++) {
-            array[0][i] = random.nextInt(-1,100); //generate a random integer and put it in the array
+            int input = random.nextInt(-1,101);
+            int zeroOrOne = random.nextInt(0,2);
+            if(i==20){
+                if(zeroOrOne == 0) {
+                    int randomIndex = random.nextInt(0,19);
+                    array[0][i] = array[0][randomIndex];
+                }
+                else
+                array[0][i] = input;
+            }
+            else
+            array[0][i] = input;
+            // array[0][i] = random.nextInt(-1,100); //generate a random integer and put it in the array
             array[1][i] = random.nextInt(1,4); //generate a random integer having 1,2,3
         }
+
+
 
         return array;
     }

@@ -21,3 +21,6 @@ mvn jqf:repro -Dclass=practice.StackIntTest -Dmethod=testEverything -Dinput=targ
 
 cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example
 mvn test-compile
+
+
+jqf/bin/jqf-zest -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything

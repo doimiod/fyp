@@ -49,3 +49,10 @@ this stack is filled with 0 like below.
 Hence, when popping 0 as a new number, the linear search detects 0 in the stack so that new 0 is not popped.
 In order to avoid that, i made above function.
 
+
+
+
+
+19/2
+
+i deleted throw new exception at pop method in stacint2 becaues it is not necssary

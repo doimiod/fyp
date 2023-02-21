@@ -11,8 +11,8 @@ public class StackInt2 {
 
     Stack<Integer> stack = new Stack<Integer>();
 	
-	public class OverflowStackIntException extends RuntimeException{
-		public OverflowStackIntException() {}
+	public class StackOverflowError extends RuntimeException{
+		public StackOverflowError() {}
 	}
 
     public class OutOfMemoryError extends RuntimeException{
@@ -56,17 +56,17 @@ public class StackInt2 {
 	
     public int pop(){ //An exception is thrown if we call pop() when the stack is empty.
 
-        try{
+        // try{
             int result = 0;
             result = this.stack.pop();
             System.out.println("s2 popped " + result);
             --this.ptr;
             return result;
-        }
-        catch(EmptyStackException e){
-            System.out.println("this stack is empty");
-            throw new EmptyStackException();
-        }
+        // }
+        // catch(EmptyStackException e){
+        //     System.out.println("this stack is empty");
+        //     throw new EmptyStackException();
+        // }
 
 	}
 

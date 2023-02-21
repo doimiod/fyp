@@ -1,6 +1,7 @@
 package practice;
 
 import java.lang.*;
+import java.util.*;
 import java.util.Arrays;
 import java.util.ArrayList;
 import edu.berkeley.cs.jqf.fuzz.*;
@@ -104,33 +105,44 @@ public class StackInt1 {
 		// return this.stack;
 */
 	
-	public int pop() throws EmptyStackException{
+	public int pop() /*throws EmptyStackException*/{
 
         int result = 0;
 
-		if(this.ptr <= 0) {
-			System.out.println("this is empty");
-			throw new EmptyStackException();
-            // try to throw an exception if out of memory or bounds 
-		}
-		
-		result = this.stack[--this.ptr];
-		System.out.println("s1 popped out " + result);
-		
-		int[] newArray = new int[this.stack.length-1];
-
-		// for (int i = 0; i < this.stack.length; i++) { //o(n) <- bad algorithm
-		// 	if (i != this.ptr)
-		// 	newArray =  addNum(newArray, this.stack[i]);
+		// if(this.ptr <= 0) {
+		// 	System.out.println("this is empty");
+		// 	throw new EmptyStackException();
+        //     // try to throw an exception if out of memory or bounds 
 		// }
+		
+		// result = this.stack[--this.ptr];
+		// System.out.println("s1 popped out " + result);
+		
+		// int[] newArray = new int[this.stack.length-1];
 
-		System.arraycopy( this.stack, 0, newArray, 0, this.stack.length-1 );
-		System.out.println("new Array is " + Arrays.toString(newArray));
+		// // for (int i = 0; i < this.stack.length; i++) { //o(n) <- bad algorithm
+		// // 	if (i != this.ptr)
+		// // 	newArray =  addNum(newArray, this.stack[i]);
+		// // }
 
-		this.stack = newArray;
+		// System.arraycopy( this.stack, 0, newArray, 0, this.stack.length-1 );
+		// // System.out.println("new Array is " + Arrays.toString(newArray));
+
+		// this.stack = newArray;
+		
+		// return result;
+
+		
+			result = this.stack[--this.ptr];
+			System.out.println("s1 popped out " + result);
+
+			int[] newArray = new int[this.stack.length-1];
+			System.arraycopy( this.stack, 0, newArray, 0, this.stack.length-1 );
+
+			this.stack = newArray;
 		
 		return result;
-		
+	
 	}
 
 /* 		
