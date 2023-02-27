@@ -60,6 +60,9 @@ public class StackIntTest {
     boolean s1Exception = false;
     boolean s2Exception = false;
 
+    Exception exception1;
+    Exception exception2;
+
     @Fuzz
     public void testEverything(@From(StackIntGenerator.class) int[][] array) {
         
@@ -88,6 +91,8 @@ public class StackIntTest {
 
 */              
 
+
+            
             int num = array[0][i];
             int[] s2arr = {};
 
@@ -103,6 +108,7 @@ public class StackIntTest {
                     s1.push(num);
                 }catch(Exception e){
                     s1Exception = true;
+                    exception1 = e;
                 }
 
                 try{
@@ -110,12 +116,11 @@ public class StackIntTest {
                 }
                 catch(Exception e){
                     s2Exception = true;
+                    exception2 = e;
                 }
 
                 if(s1Exception == true || s2Exception == true){
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
-                    Exception exception1 = assertThrows(Exception.class, () -> s1.push(num));
-                    Exception exception2 = assertThrows(Exception.class, () -> s2.push(num));
                     assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
@@ -159,6 +164,7 @@ public class StackIntTest {
                     pop1 = s1.pop();
                 }catch(Exception e){
                     s1Exception = true;
+                    exception1 = e;
                 }
 
                 try{
@@ -166,12 +172,11 @@ public class StackIntTest {
                 }
                 catch(Exception e){
                     s2Exception = true;
+                    exception2 = e;
                 }
 
                 if(s1Exception == true || s2Exception == true){
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
-                    Exception exception1 = assertThrows(Exception.class, () -> s1.pop());
-                    Exception exception2 = assertThrows(Exception.class, () -> s2.pop());
                     assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
@@ -206,6 +211,7 @@ public class StackIntTest {
                     System.out.println("s1 peek is " + s1.peek());
                 }catch(Exception e){
                     s1Exception = true;
+                    exception1 = e;
                 }
 
                 try{
@@ -213,12 +219,13 @@ public class StackIntTest {
                 }
                 catch(Exception e){
                     s2Exception = true;
+                    exception2 = e;
                 }
 
                 if(s1Exception == true || s2Exception == true){
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
-                    Exception exception1 = assertThrows(Exception.class, () -> s1.peek());
-                    Exception exception2 = assertThrows(Exception.class, () -> s2.peek());
+                    // Exception exception1 = assertThrows(Exception.class, () -> s1.peek());
+                    // Exception exception2 = assertThrows(Exception.class, () -> s2.peek());
                     assertEquals(exception1, exception2); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }

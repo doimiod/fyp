@@ -10,6 +10,10 @@ public class StackInt2 {
 	private int ptr;
 
     Stack<Integer> stack = new Stack<Integer>();
+
+    public class EmptyStackException extends RuntimeException{
+		public EmptyStackException() {}
+	}
 	
 	public class StackOverflowError extends RuntimeException{
 		public StackOverflowError() {}
@@ -54,19 +58,19 @@ public class StackInt2 {
         
     }
 	
-    public int pop(){ //An exception is thrown if we call pop() when the stack is empty.
+    public int pop() throws EmptyStackException{ //An exception is thrown if we call pop() when the stack is empty.
 
-        // try{
+        try{
             int result = 0;
             result = this.stack.pop();
             System.out.println("s2 popped " + result);
             --this.ptr;
             return result;
-        // }
-        // catch(EmptyStackException e){
-        //     System.out.println("this stack is empty");
-        //     throw new EmptyStackException();
-        // }
+        }
+        catch(java.util.EmptyStackException e){
+            System.out.println("this stack is empty");
+            throw new EmptyStackException();
+        }
 
 	}
 
@@ -78,8 +82,16 @@ public class StackInt2 {
         return stack.size(); 
     }
 
-    public int peek(){
-        return stack.peek();
+    public int peek() throws EmptyStackException{
+
+        try{
+            return stack.peek();
+        }
+        catch(java.util.EmptyStackException e){
+            System.out.println("this stack is empty");
+            throw new EmptyStackException();
+        }
+        
     }
 
     public Object[] gObjects(){

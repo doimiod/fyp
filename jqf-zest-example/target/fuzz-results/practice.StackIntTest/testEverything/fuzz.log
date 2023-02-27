@@ -1,59 +1,42 @@
-Saving new input (at run 1): input #0 of size 52; reason = +count +cov +valid
+Saving new input (at run 1): input #0 of size 16; reason = +count +cov +valid
 Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000000 random +count +cov +valid
-Saving new input (at run 2): input #1 of size 52; reason = +count +cov +valid
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000001 src:000000,havoc:7 +count +cov +valid
-Found crash: class java.lang.AssertionError - expected:<java.lang.ArrayIndexOutOfBoundsException: Index -2 out of bounds for length 0> but was:<java.util.EmptyStackException>
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000000 src:000000,havoc:12 +crash
-Saving new input (at run 4): input #2 of size 148; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000002 src:000000,havoc:18 +count
-Saving new input (at run 15): input #3 of size 184; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000003 src:000000,havoc:12 +count
-Saving new input (at run 17): input #4 of size 52; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000004 src:000000,havoc:6 +count
 Found crash: class java.lang.AssertionError - expected:<practice.StackInt1$EmptyStackException> but was:<java.util.EmptyStackException>
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000001 src:000000,havoc:4 +crash
-Saving new input (at run 21): input #5 of size 220; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000005 src:000000,havoc:4 +count
-Saving new input (at run 22): input #6 of size 124; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000006 src:000000,havoc:12 +count
-Saving new input (at run 39): input #7 of size 268; reason = +count +cov +valid
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000007 src:000000,havoc:11 +count +cov +valid
-Saving new input (at run 40): input #8 of size 88; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000008 src:000000,havoc:17 +count
-Saving new input (at run 68): input #9 of size 28; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000009 src:000000,havoc:9 +count
-Saving new input (at run 70): input #10 of size 284; reason = +count +cov +valid
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000010 src:000000,havoc:10 +count +cov +valid
-Saving new input (at run 71): input #11 of size 244; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000011 src:000000,havoc:4 +count
-Saving new input (at run 114): input #12 of size 16; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000012 src:000000,havoc:10 +count
-Saving new input (at run 167): input #13 of size 340; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000013 src:000000,havoc:27 +count
-Saving new input (at run 476): input #14 of size 52; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000014 src:000000,havoc:12 +count
-Found crash: class java.lang.AssertionError - expected:<98> but was:<9>
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000002 src:000001,havoc:4 +crash
-Saving new input (at run 1479): input #15 of size 184; reason = +count +cov +valid
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000015 src:000003,havoc:5 +count +cov +valid
-Saving new input (at run 1573): input #16 of size 356; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000016 src:000005,havoc:6 +count
-Saving new input (at run 2931): input #17 of size 284; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000017 src:000010,havoc:27 +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000000 src:000000,havoc:10 +crash
+Found crash: class java.lang.AssertionError - expected:<54> but was:<8>
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000001 src:000000,havoc:14 +crash
+Found crash: class java.lang.AssertionError - expected:<practice.StackInt1$EmptyStackException> but was:<java.util.EmptyStackException>
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000002 src:000000,havoc:10 +crash
+Saving new input (at run 26): input #1 of size 320; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000001 src:000000,havoc:6 +count +cov +valid
+Saving new input (at run 29): input #2 of size 296; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000002 src:000000,havoc:5 +count
+Saving new input (at run 34): input #3 of size 40; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000003 src:000000,havoc:11 +count
+Saving new input (at run 37): input #4 of size 160; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000004 src:000000,havoc:8 +count
+Saving new input (at run 45): input #5 of size 184; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000005 src:000000,havoc:16 +count
+Saving new input (at run 53): input #6 of size 28; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000006 src:000000,havoc:15 +count
+Saving new input (at run 66): input #7 of size 76; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000007 src:000000,havoc:16 +count
 Found crash: class java.lang.AssertionError - 
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000003 src:000015,havoc:17 +crash
-Saving new input (at run 4611): input #18 of size 184; reason = +count
-Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000018 src:000015,havoc:2 +count
-
-# Cycle 1 completed.
-Here is a list of favored inputs:
-Input 0 is responsible for 44 branches
-Input 1 is responsible for 10 branches
-Input 7 is responsible for 5 branches
-Input 10 is responsible for 1 branches
-Input 15 is responsible for 1 branches
-Total 61 branches covered
-
-
-
-
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000003 src:000000,havoc:6 +crash
+Saving new input (at run 95): input #8 of size 28; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000008 src:000000,havoc:6 +count
+Saving new input (at run 96): input #9 of size 160; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000009 src:000000,havoc:9 +count
+Saving new input (at run 97): input #10 of size 172; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000010 src:000000,havoc:3 +count +cov +valid
+Saving new input (at run 100): input #11 of size 340; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000011 src:000000,havoc:4 +count +cov +valid
+Saving new input (at run 122): input #12 of size 52; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000012 src:000000,havoc:2 +count
+Found crash: class java.lang.AssertionError - expected:<64> but was:<56>
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/failures/id_000004 src:000000,havoc:7 +crash
+Saving new input (at run 556): input #13 of size 320; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000013 src:000001,havoc:2 +count
+Saving new input (at run 594): input #14 of size 320; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000014 src:000001,havoc:10 +count
+Saving new input (at run 606): input #15 of size 332; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000015 src:000001,havoc:20 +count +cov +valid

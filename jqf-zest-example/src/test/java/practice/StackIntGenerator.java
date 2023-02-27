@@ -26,7 +26,7 @@ public class StackIntGenerator extends Generator<int[][]> {
             int zeroOrOne = random.nextInt(0,2);
             if(i==20){
                 if(zeroOrOne == 0) {
-                    int randomIndex = random.nextInt(0,19);
+                    int randomIndex = random.nextInt(0,20);
                     array[0][i] = array[0][randomIndex];
                 }
                 else
