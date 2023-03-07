@@ -125,7 +125,12 @@ public class StackIntTest {
 
                 if(s1Exception == true || s2Exception == true){
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
-                    assertEquals(exception1, exception2); // check both of them throw the same exception
+                    // assertEquals(exception1, exception2); // check both of them throw the same exception
+
+
+                    boolean compareCase1Exceptions = compare(exception1, exception2, className1, className2);
+                    // assertEquals(exception1, exception2); // check both of them throw the same exception
+                    assertTrue(compareCase1Exceptions == true); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 
@@ -276,49 +281,49 @@ public class StackIntTest {
 
         boolean equivalent = true;
 
+        // check causes are equivalent
         System.out.println("cause message1: " + e1.getCause());
         System.out.println("cause message2: " + e2.getCause());
-        
-        // System.out.println("traced message1: " + Arrays.toString(e1.getStackTrace()));
-        // System.out.println("traced message2: " + Arrays.toString(e2.getStackTrace()));
-        
-        System.out.println("message1: " + e1.getMessage());
-        System.out.println("message2: " + e2.getMessage());
-
-        System.out.println("localised message1: " + e1.getLocalizedMessage());
-        System.out.println("localised message2: " + e2.getLocalizedMessage());
-
-        System.out.println("string message1: " + e1.toString());
-        System.out.println("string message2: " + e2.toString());
-
         if(e1.getCause() != e2.getCause()){
             equivalent = false;
             System.out.println("getCause is not euivalent!");
         }
 
+        // System.out.println("traced message1: " + Arrays.toString(e1.getStackTrace()));
+        // System.out.println("traced message2: " + Arrays.toString(e2.getStackTrace()));
         // if(e1.getStackTrace() != e2.getStackTrace()){
         //     equivalent = false;
         //     System.out.println("stackTrace is not euivalent!");
         // }
 
-        if(e1.getMessage() != e2.getMessage()){
+
+        // check messages are eqivalent
+        System.out.println("message1: " + e1.getMessage());
+        System.out.println("message2: " + e2.getMessage());
+        if(e1.getMessage() == null) System.out.println("its null");
+        else if(!e1.getMessage().equals(e2.getMessage())){
             equivalent = false;
             System.out.println("getMessage is not equivalent!");
         }
-
-        if(e1.getLocalizedMessage() != e2.getLocalizedMessage()){
+        
+        // check localised messages are equivalent
+        System.out.println("localised message1: " + e1.getLocalizedMessage());
+        System.out.println("localised message2: " + e2.getLocalizedMessage());
+        if(e1.getLocalizedMessage() == null) System.out.println("its fucking null");
+        else if(!e1.getLocalizedMessage().equals(e2.getLocalizedMessage())){
             equivalent = false;
             System.out.println("getLocalaisedMessage is not equivalent!");
         }
 
+
+        // check error statements are equivalent
         String mes1 = e1.toString();
         String mes2 = e2.toString();
-
         System.out.println("class name 1 is "+className1);
         System.out.println("class name 2 is "+className2);
         mes1 = mes1.replace(className1, className2);
 
-        System.out.println("mes1 is "+mes1+", mes2 is "+mes2);
+        System.out.println("error message 1 is "+mes1+", error message2 is "+mes2);
 
         if(!mes1.equals(mes2)){
             equivalent = false;
