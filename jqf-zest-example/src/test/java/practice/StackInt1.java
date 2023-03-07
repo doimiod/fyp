@@ -105,7 +105,7 @@ public class StackInt1 {
 		// return this.stack;
 */
 	
-	public int pop() /*throws EmptyStackException*/{
+	public int pop() throws EmptyStackException{
 
         int result = 0;
 

@@ -57,6 +57,9 @@ public class StackIntTest {
     public StackInt1 s1 = new StackInt1(10);
     public StackInt2 s2 = new StackInt2(10);
 
+    String className1 = s1.getClass().getName();
+    String className2 = s2.getClass().getName();
+
     boolean s1Exception = false;
     boolean s2Exception = false;
 
@@ -68,6 +71,7 @@ public class StackIntTest {
         
         // System.out.println(Arrays.toString(array));
         System.out.println(Arrays.deepToString(array));
+        // System.out.println(className1);
 
         // make a case
         System.out.println(array[0].length);
@@ -177,7 +181,10 @@ public class StackIntTest {
 
                 if(s1Exception == true || s2Exception == true){
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
-                    assertEquals(exception1, exception2); // check both of them throw the same exception
+                    
+                    boolean compareCase2Exceptions = compare(exception1, exception2, className1, className2);
+                    // assertEquals(exception1, exception2); // check both of them throw the same exception
+                    assertTrue(compareCase2Exceptions == true); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 
@@ -226,7 +233,11 @@ public class StackIntTest {
                     assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
                     // Exception exception1 = assertThrows(Exception.class, () -> s1.peek());
                     // Exception exception2 = assertThrows(Exception.class, () -> s2.peek());
-                    assertEquals(exception1, exception2); // check both of them throw the same exception
+                    // assertEquals(exception1, exception2); // check both of them throw the same exception
+
+                    boolean compareCase3Exceptions = compare(exception1, exception2, className1, className2);
+                    // assertEquals(exception1, exception2); // check both of them throw the same exception
+                    assertTrue(compareCase3Exceptions == true); // check both of them throw the same exception
                     System.out.println("both of them throw the same exception");
                 }
 
@@ -244,6 +255,10 @@ public class StackIntTest {
            
         }
 
+
+
+
+
         // s1.push(1);
         // s2.push(1);
         // s1.push(2);
@@ -257,6 +272,61 @@ public class StackIntTest {
         
     }
 
+    public boolean compare(Exception e1, Exception e2, String className1, String className2) {
+
+        boolean equivalent = true;
+
+        System.out.println("cause message1: " + e1.getCause());
+        System.out.println("cause message2: " + e2.getCause());
+        
+        // System.out.println("traced message1: " + Arrays.toString(e1.getStackTrace()));
+        // System.out.println("traced message2: " + Arrays.toString(e2.getStackTrace()));
+        
+        System.out.println("message1: " + e1.getMessage());
+        System.out.println("message2: " + e2.getMessage());
+
+        System.out.println("localised message1: " + e1.getLocalizedMessage());
+        System.out.println("localised message2: " + e2.getLocalizedMessage());
+
+        System.out.println("string message1: " + e1.toString());
+        System.out.println("string message2: " + e2.toString());
+
+        if(e1.getCause() != e2.getCause()){
+            equivalent = false;
+            System.out.println("getCause is not euivalent!");
+        }
+
+        // if(e1.getStackTrace() != e2.getStackTrace()){
+        //     equivalent = false;
+        //     System.out.println("stackTrace is not euivalent!");
+        // }
+
+        if(e1.getMessage() != e2.getMessage()){
+            equivalent = false;
+            System.out.println("getMessage is not equivalent!");
+        }
+
+        if(e1.getLocalizedMessage() != e2.getLocalizedMessage()){
+            equivalent = false;
+            System.out.println("getLocalaisedMessage is not equivalent!");
+        }
+
+        String mes1 = e1.toString();
+        String mes2 = e2.toString();
+
+        System.out.println("class name 1 is "+className1);
+        System.out.println("class name 2 is "+className2);
+        mes1 = mes1.replace(className1, className2);
+
+        System.out.println("mes1 is "+mes1+", mes2 is "+mes2);
+
+        if(!mes1.equals(mes2)){
+            equivalent = false;
+            System.out.println("error massage is not equivalent!");
+        }
+
+        return equivalent;
+    }
 }
 
 
