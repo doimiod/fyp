@@ -1,0 +1,826 @@
+Saving new input (at run 1): input #0 of size 100; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000000 random +count +cov +valid
+Saving new input (at run 2): input #1 of size 100; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000001 src:000000,havoc:6 +count +cov +valid
+Saving new input (at run 3): input #2 of size 100; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000002 src:000000,havoc:2 +count
+Saving new input (at run 5): input #3 of size 316; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000003 src:000000,havoc:7 +count
+Saving new input (at run 6): input #4 of size 280; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000004 src:000000,havoc:16 +count
+Saving new input (at run 10): input #5 of size 100; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000005 src:000000,havoc:1 +count
+Saving new input (at run 11): input #6 of size 172; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000006 src:000000,havoc:18 +count +cov +valid
+Saving new input (at run 12): input #7 of size 100; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000007 src:000000,havoc:19 +count
+Saving new input (at run 13): input #8 of size 52; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000008 src:000000,havoc:20 +count
+Saving new input (at run 14): input #9 of size 184; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000009 src:000000,havoc:3 +count
+Saving new input (at run 16): input #10 of size 100; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000010 src:000000,havoc:5 +count +cov +valid
+Saving new input (at run 20): input #11 of size 100; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000011 src:000000,havoc:10 +count
+Saving new input (at run 21): input #12 of size 328; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000012 src:000000,havoc:15 +count
+Saving new input (at run 24): input #13 of size 100; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000013 src:000000,havoc:8 +count
+Saving new input (at run 34): input #14 of size 340; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000014 src:000000,havoc:3 +count
+Saving new input (at run 38): input #15 of size 184; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000015 src:000000,havoc:6 +count
+Saving new input (at run 67): input #16 of size 52; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000016 src:000000,havoc:4 +count
+Saving new input (at run 74): input #17 of size 40; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000017 src:000000,havoc:6 +count
+Saving new input (at run 98): input #18 of size 52; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000018 src:000000,havoc:35 +count
+Saving new input (at run 104): input #19 of size 16; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000019 src:000000,havoc:15 +count
+Saving new input (at run 111): input #20 of size 352; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000020 src:000000,havoc:10 +count
+Saving new input (at run 162): input #21 of size 280; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000021 src:000000,havoc:40 +count
+Saving new input (at run 222): input #22 of size 340; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000022 src:000000,havoc:10 +count
+Saving new input (at run 248): input #23 of size 280; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000023 src:000000,havoc:14 +count
+Saving new input (at run 414): input #24 of size 352; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000024 src:000000,havoc:16 +count
+Saving new input (at run 1110): input #25 of size 304; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000025 src:000001,havoc:11 +count
+Saving new input (at run 1613): input #26 of size 280; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000026 src:000001,havoc:6 +count
+Saving new input (at run 3843): input #27 of size 340; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000027 src:000014,havoc:18 +count
+
+# Cycle 1 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 7301): input #28 of size 304; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000028 src:000010,havoc:1 +count
+Saving new input (at run 8724): input #29 of size 304; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000029 src:000028,havoc:4 +count
+
+# Cycle 2 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 3 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 17045): input #30 of size 328; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000030 src:000013,havoc:33 +count
+
+# Cycle 4 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 5 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 26323): input #31 of size 280; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000031 src:000021,havoc:40 +count
+
+# Cycle 6 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 7 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 8 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 9 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 44540): input #32 of size 352; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000032 src:000024,havoc:13 +count
+
+# Cycle 10 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 49374): input #33 of size 328; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000033 src:000030,havoc:18 +count
+
+# Cycle 11 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 12 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 13 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 14 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 15 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 16 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 17 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 18 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 19 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 20 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 21 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 22 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 23 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 24 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 25 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 26 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 27 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 28 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 29 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 30 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 31 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 32 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 33 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 34 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 35 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 36 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 37 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 38 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 39 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 40 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 41 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 42 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 43 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 44 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 45 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 46 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 47 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 48 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 49 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 50 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 51 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+Saving new input (at run 238282): input #34 of size 304; reason = +count
+Saved - /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/target/fuzz-results/practice.StackIntTest/testEverything/corpus/id_000034 src:000028,havoc:25 +count
+
+# Cycle 52 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 53 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 54 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 55 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 56 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 57 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 58 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 59 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 60 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 61 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 62 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
+
+# Cycle 63 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 60 branches
+Input 1 is responsible for 9 branches
+Input 6 is responsible for 6 branches
+Input 10 is responsible for 3 branches
+Total 78 branches covered
+
+
+
+
