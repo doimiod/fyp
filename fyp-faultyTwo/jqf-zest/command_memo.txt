@@ -1,0 +1,43 @@
+# to run jqf
+cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
+mvn jqf:fuzz -Dclass=faultyTwo.FaultyTwoTest -Dmethod=test -Dtime=1m
+
+cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
+mvn jqf:repro -Dclass=faultyTwo.FaultyTwoTest -Dmethod=test -Dinput=target/fuzz-results/faultyTwo.FaultyTwoTest/test/failures/id_000000 -DprintArgs
+
+
+# to compile
+cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
+mvn test-compile
+
+
+new info
+
+when using maven project, java file should be located as follows:
+src/main/java        Application/Library sources
+src/main/resources    Application/Library resource
+src/main/filters      Resource filter files
+src/main/assembly    Assembly descriptors
+src/main/config    Configuration files
+src/main/webapp    Web application sources
+src/test/java        Test sources
+src/test/resources  Test resources
+src/test/filters      Test resource filter files
+src/site              Site
+
+
+Flags only supported by jqf:fuzz
+-Dtime=<timeout>: Stop fuzzing after a timeout. Examples of timeouts include 30s, 60m or 24h. Default is empty, implying no timeout.
+-DrunTimeout=<timeout>: Sets a timeout on a single trial. This is useful for catching tests that may hang in infinite or very long loops.
+-DexitOnCrash: Stop fuzzing if a failure is encountered. Useful if you only care about finding the existence of failure and not necessarily generating many failing test cases. 
+Also useful for debugging fuzzing runs where the first input appears to fail.
+-Dblind: Do not save any inputs during fuzzing. Every input is generated randomly from scratch instead of by mutation. This is equivalent to running only junit-quickcheck, as it does not rely on a feedback-directed search.
+-DnoCov: Do not instrument classes for code coverage. This flag only makes sense with when -Dblind is also enabled, since coverage-guided fuzzing cannot work without instrumentation. 
+When this flag is set, the speed at which inputs are generated is significantly higher for blind fuzzing, but no coverage numbers are reported on the status screen.
+-DsaveAll: Save ALL inputs ever generated during fuzzing in a subdirectory called all in the output directory. This flag will lead to a very large number of files being created, and could potentially slow down the fuzzing throughput.
+-Dquiet: Do not show status screen while fuzzing.
+-Dtarget=<dir>: Change the root directory for results (default: target)
+-Dout=<dir>: Name of subdirectory (within target) for storing results (default: fuzz-results/$TARGET_CLASS/$TARGET_METHOD).
+-Din=<dir>: Name of directory containing inputs to initialize the fuzzing queue with. Can be used for seed inputs or for resuming a fuzzing session. Default is empty, meaning fuzzing starts with randomly generated seed inputs.
+-DlibFuzzerCompatOutput: Make the output conform to libFuzzer, for use in feeding into other engines that process fuzzer output (e.g. visualization tools).
+-DfixedSize: Make the fuzzer treat inputs as fixed-sized array of bytes, instead of dynamically resizable input streams. This is typically only useful when fuzzing programs that process arbitrary length InputStream objects.

@@ -1,0 +1,98 @@
+27 January 2023
+• deal with exceptions in equivalence -> i have to report the error i think?
+-- make an exception for stackInt2 by myself - done
+-- main thing is to compare two classes. lets find how to compare two arrays for now.
+currently doing convert stack into arrays. abd have to find a way to try catch exception
+• restrict the domain of integer values done - done
+• understand how to limit the number of calls to the test function that fuzz testing is doing
+---- by maven
+• find a way to stop testing when one difference is found - i think it can be done by the time
+
+
+i found it stopped somehow but i cant limit by my own
+it says 
+Fuzzing stopped due to guidance exception: Too many trials without coverage; likely all assumption violations
+
+i have to make another array to diceide cases - done
+
+
+the reason why i made this 
+int[] newArray = {};
+for (int i = 0; i < this.stack.length; i++) { //o(n)
+    if (i != this.ptr)
+    newArray =  addNum(newArray, this.stack[i]);
+}
+
+because if i just decremante the stack, it just changed the posistion of the pointer,
+then when it checks whether the stack contains the same number, since only the position of the pointer was changed,
+the popped number remain in the stack. 
+Therefore, i make a new array which does not contain the same number.
+
+
+the reason why i made this when pushing.
+
+public int[] addNum(int[] arr, int num){
+
+    int[] newNumber = new int[(arr==null)?1:arr.length+1];
+    if (arr!= null)
+    System.arraycopy( arr, 0, newNumber, 0, arr.length );
+    newNumber[newNumber.length-1] = num;
+    arr = newNumber;
+
+    return arr;
+}
+
+because when i initialise the stack like this, 
+stack = new int[10];
+this stack is filled with 0 like below.
+[0,0,0,0,0,0,0,0,0,0]
+Hence, when pushing 0 as a new number, the linear search detects 0 in the stack so that new 0 is not popped.
+In order to avoid that, i made above function.
+
+
+
+
+
+19/2
+
+i deleted throw new exception at pop method in stacint2 becaues it is not necssary
+
+1.
+i made 
+if(s1Exception == true || s2Exception == true){
+    assertTrue(s1Exception == s2Exception); // check both of them throw exceptions
+    Exception exception1 = assertThrows(Exception.class, () -> s1.peek());
+    Exception exception2 = assertThrows(Exception.class, () -> s2.peek());
+    assertEquals(exception1, exception2); // check both of them throw the same exception
+    System.out.println("both of them throw the same exception");
+}
+
+S1 throws $StackInt1.emptyStackException while S2 throws java.util.emptyStackException
+so that these exceptions are regarded as different
+
+2.
+If i do not make an exception by myself in S1, S1 pop method throws
+java.util.ArrayIndexOutOfBoundsException, which is also different from the excepton S2 throws.
+
+
+3.
+How to make a push method?
+
+the way i make push method is 
+
+public int[] addNum(int[] arr, int num){
+
+    int[] newNumber = new int[(arr==null)?1:arr.length+1];
+    if (arr!= null)
+    System.arraycopy( arr, 0, newNumber, 0, arr.length );
+    newNumber[newNumber.length-1] = num;
+    arr = newNumber;
+
+    return arr;
+}
+
+because when i initialise the stack like this, stack = new int[10];
+this stack is filled with 0 like below.
+[0,0,0,0,0,0,0,0,0,0]
+Hence, when pushing 0 as a new number, the linear search detects 0 in the stack so that new 0 is not popped.
+can it be a particular error?
