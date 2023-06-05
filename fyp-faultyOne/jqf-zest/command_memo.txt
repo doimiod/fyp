@@ -1,8 +1,7 @@
 # to run jqf
-cd /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest
 mvn jqf:fuzz -Dclass=faultyOne.FaultyOneTest -Dmethod=test -Dtime=1m
 
-cd /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest
+
 mvn jqf:repro -Dclass=faultyOne.FaultyOneTest -Dmethod=test -Dinput=target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000000 -DprintArgs
 
 

@@ -1,13 +1,10 @@
 # to run jqf
-cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
 mvn jqf:fuzz -Dclass=faultyTwo.FaultyTwoTest -Dmethod=test -Dtime=1m
 
-cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
-mvn jqf:repro -Dclass=faultyTwo.FaultyTwoTest -Dmethod=test -Dinput=target/fuzz-results/faultyTwo.FaultyTwoTest/test/failures/id_000000 -DprintArgs
+cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zestmvn jqf:repro -Dclass=faultyTwo.FaultyTwoTest -Dmethod=test -Dinput=target/fuzz-results/faultyTwo.FaultyTwoTest/test/failures/id_000000 -DprintArgs
 
 
 # to compile
-cd /Users/doimasanari/Documents/fyp-faultyTwo/jqf-zest
 mvn test-compile
 
 
