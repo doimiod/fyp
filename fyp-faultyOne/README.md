@@ -1,1 +1,1 @@
-# fyp
+# Equivalence check with simple codes
