@@ -4,7 +4,6 @@ cd jqf
 mvn package
 
 # to compile java files
-cd /Users/doimasanari/Documents/fyp-copy/jqf-zest-example/src/test/java/practice
 javac -cp .:$(jqf/scripts/classpath.sh) StackInt1.java StackInt2.java StackInt1Main.java StackInt2Main.java StackIntGenerator.java StackIntTest.java
 
 # to see a failure report
@@ -13,22 +12,18 @@ jqf/bin/jqf-repro -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything  
 # to compile
 
 # to run jqf
-cd /Users/doimasanari/Documents/fyp-priorityQueue/jqf-zest
 mvn jqf:fuzz -Dclass=priorityQueue.PriorityQueueTest -Dmethod=testPriorityQueue -Dtime=1m
 
 # to run jqf until it crashes
-cd /Users/doimasanari/Documents/fyp-priorityQueue/jqf-zest
 mvn jqf:fuzz -Dclass=priorityQueue.PriorityQueueTest -Dmethod=testPriorityQueue -DexitOnCrash
 
-cd /Users/doimasanari/Documents/fyp-priorityQueue/jqf-zest
+
 mvn jqf:repro -Dclass=priorityQueue.PriorityQueueTest -Dmethod=testPriorityQueue -Dinput=target/fuzz-results/priorityQueue.priorityQueueTest/testPriorityQueue/failures/id_000000 -DprintArgs
 
-cd /Users/doimasanari/Documents/fyp-priorityQueue/jqf-zest
 mvn test-compile
 
 
 jqf/bin/jqf-zest -c .:$(jqf/scripts/classpath.sh) StackIntTest testEverything
-
 
 
 new info
