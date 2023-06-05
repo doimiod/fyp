@@ -1,0 +1,66 @@
+Found crash: class java.lang.AssertionError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000000 random +crash
+Found crash: class java.lang.AssertionError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000001 random +crash
+Saving new input (at run 58): input #0 of size 8; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/corpus/id_000000 random +count +cov +valid
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000002 src:000000,havoc:6 +crash
+Saving new input (at run 87): input #1 of size 8; reason = +count +cov +valid
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/corpus/id_000001 src:000000,havoc:9 +count +cov +valid
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000003 src:000000,havoc:9 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000004 src:000000,havoc:9 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000005 src:000000,havoc:13 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000006 src:000000,havoc:6 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000007 src:000000,havoc:6 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000008 src:000000,havoc:12 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000009 src:000000,havoc:8 +crash
+Found crash: class java.lang.StackOverflowError - 
+Saved - /Users/doimasanari/Documents/fyp-faultyOne/jqf-zest/target/fuzz-results/faultyOne.FaultyOneTest/test/failures/id_000010 src:000001,havoc:21 +crash
+
+# Cycle 1 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 12 branches
+Input 1 is responsible for 1 branches
+Total 13 branches covered
+
+
+
+
+
+# Cycle 2 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 12 branches
+Input 1 is responsible for 1 branches
+Total 13 branches covered
+
+
+
+
+
+# Cycle 3 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 12 branches
+Input 1 is responsible for 1 branches
+Total 13 branches covered
+
+
+
+
+
+# Cycle 4 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 12 branches
+Input 1 is responsible for 1 branches
+Total 13 branches covered
+
+
+
+
